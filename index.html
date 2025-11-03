@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎂 My 19th Birthday</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <audio id="bg-music" src="music.mp3" loop></audio>
+ <button id="musicBtn" class="music-btn">🎵 Play Music</button>
+  <canvas id="confetti"></canvas>
+
+  <!-- Navigation -->
+  <nav>
+    <button onclick="showPage(1)">🏠 Home</button>
+    <button onclick="showPage(2)">📸 Photos</button>
+    <button onclick="showPage(3)">💬 Wish Me</button>
+    <button onclick="showPage(4)">🎁 Gift Card</button>
+    <button onclick="showPage(5)">📝 Guestbook</button>
+  </nav>
+
+  <!-- Page 1: Invitation -->
+  <section id="page1" class="page active animate">
+    <h1>🎉 Edmond's 19th Birthday 🎂</h1>
+    <p>This my  birthday web app — share your wishes with me as I turn 19!.It's Edmond innit.💖</p>
+    <p id="countdown"></p>
+    <button onclick="showPage(2)">See My Photos 📸</button>
+  </section>
+
+  <!-- Page 2: Photo Tiles -->
+  <section id="page2" class="page animate">
+    <h2>My Moments 📸</h2>
+    <div class="gallery">
+      <img src="1.jpg" alt="Photo 1">
+      <img src="2.jpg" alt="Photo 2">
+      <img src="3.jpg" alt="Photo 3">
+      <img src="4.jpg" alt="Photo 4">
+      <img src="5.jpg" alt="Photo 5">
+      <img src="6.jpg" alt="Photo 6">
+      <img src="7.jpg" alt="Photo 7">
+     <img src="8.jpg" alt="Photo 8">
+      <img src="9.jpg" alt="Photo 9">
+      <img src="10.jpg" alt="Photo 10">
+    </div>
+  </section>
+
+  <!-- Page 3: WhatsApp Wishes -->
+  <section id="page3" class="page animate">
+    <h2>💬 Send Me a WhatsApp Message</h2>
+    <p>Click below to send me your birthday wishes directly!</p>
+    <a class="whatsapp-btn" href="https://wa.me/+254798150436?text=Happy%2019th%20Birthday%20Edmond!%20🎉" target="_blank">Send on WhatsApp</a>
+  </section>
+
+  <!-- Page 4: Gift Card Creator -->
+  <section id="page4" class="page animate">
+    <h2>🎁 Create a Gift Card</h2>
+    <form id="giftForm">
+      <input type="text" id="senderName" placeholder="Your Name" required>
+      <textarea id="giftMessage" placeholder="Your message to Edmond" required></textarea>
+      <button type="submit">Send Gift Card 🎉</button>
+    </form>
+    <div id="giftOutput"></div>
+  </section>
+
+  <!-- Page 5: Guestbook -->
+  <section id="page5" class="page animate">
+    <h2>📝 Leave a Birthday Wish</h2>
+    <form id="guestForm">
+      <input type="text" id="guestName" placeholder="Your Name" required>
+      <textarea id="guestMessage" placeholder="Your Message" required></textarea>
+      <button type="submit">Submit 💌</button>
+    </form>
+    <div id="guestList"></div>
+  </section>
+
+  <!-- Page 6: Thank You -->
+  <section id="page6" class="page animate">
+    <h2>💖 Thank You!</h2>
+    <p>
+      My 19th birthday has passed — and I’m so grateful for every wish, message, and gift you shared.
+      You made this celebration unforgettable! 🎉
+    </p>
+    <p>See you again for my 20th! 🥂</p>
+    <div id="hearts">💖💖💖💖💖</div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
