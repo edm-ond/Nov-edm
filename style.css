@@ -124,6 +124,35 @@ button[type="submit"] {
   animation: pulse 2s infinite;
 }
 
+#scrollUpBtn {
+  display: none;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 100;
+  font-size: 26px;
+  border: none;
+  outline: none;
+  background-color: #ff69b4;
+  color: white;
+  cursor: pointer;
+  padding: 14px 18px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  animation: glow 2s infinite alternate;
+  transition: all 0.3s ease;
+}
+
+#scrollUpBtn:hover {
+  transform: scale(1.1);
+  background-color: #ff1493;
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 10px #fff, 0 0 20px #ff69b4; }
+  to { box-shadow: 0 0 20px #fff, 0 0 40px #ff1493; }
+}
+
 @keyframes pulse {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.2); }
